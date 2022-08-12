@@ -1,0 +1,79 @@
+				+-~-~-~-~-~-~-~-~-~-~-~+
+				|==>Access Modifiers<==|
+				+~-~-~-~-~-~-~-~-~-~-~-+
+
+Access modifiers help determine what files in the application have access to the classes, methods, or fields. We can indicate exactly how visible the following class member is by declaring the modifier in front of the class, variable, or method. 
+
+The four access modifiers in Java:
+
+*private
++-----------------------------------------------------------+
+|	private String secretMessage;						|
++-----------------------------------------------------------+
+*default
++-----------------------------------------------------------+
+|	//when there is no access modifier					|
+|​​​​​​​	String name;									|
++-----------------------------------------------------------+
+*protected
++-----------------------------------------------------------+
+|	protected String fact;							|
++-----------------------------------------------------------+
+*public
++-----------------------------------------------------------+
+|	public int age;								|
++-----------------------------------------------------------+
+
+There are specific rules around which modifiers can be applied in which context. For instance, a top-tier class (a class in a .java file of the same name) cannot be private or protected.
+
+
+Example of what methods can look like with these modifiers.
+
++-----------------------------------------------------------+
+|												|
+|	public class Dog { 								|
+|												|
+|		public static void main(String[] args) { 		|
+|    		//body								|
+|		}										|
+|												|  
+|		private void bark(){						|
+|			//body of a private method				|
+|		}										|
+|												|
+|		void howl(){								|
+|			//body of a default method				|
+|		}										|
+|												|
+|		protected void chewOnToys(){					|
+|			//body of a protected method				|
+|		}										|
+|												|
+|		public void play(){							|
+|			//body of a public method				|
+|		}										|
+|	}											|
+|												|
++-----------------------------------------------------------+
+
+Each one of these methods would have different access throughout our program.
+
+You can use any of the access modifiers on a method or a field of your class.
+
+That is crucial to know and remember, so let's go over them!
+
+private - this means that the information is only accessible within the class itself.
+
+ ==> What happens in the house is only known by the people living 	there.
+
+default - this is also called package-private, as we have seen so far. This means it is only accessible within the package.
+
+ ==> You and the apartment managers know how much rent you pay a 	month, but no one else.
+
+protected - this means that the information is only accessible by everything in the same package or subclasses.
+
+ ==> You know who comes to your apartment, but so might the neighbors 	or complex managers.
+
+public - this means that the classes and methods are accessible everywhere in our application. Therefore accessible by anything.
+
+ ==> Everyone can go to the grocery store.
